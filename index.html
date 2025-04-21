@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel行顺序调整工具</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Excel行顺序调整工具</h1>
+        <div class="upload-section">
+            <div class="file-upload">
+                <h3>上传参考Excel文件（第一个表）</h3>
+                <input type="file" id="referenceFile" accept=".xlsx,.xls">
+            </div>
+            <div class="file-upload">
+                <h3>上传需要调整的Excel文件（第二个表）</h3>
+                <input type="file" id="targetFile" accept=".xlsx,.xls">
+            </div>
+            <button id="processBtn" disabled>开始处理</button>
+        </div>
+        <div class="result-section" style="display: none;">
+            <h3>处理结果</h3>
+            <div id="resultTable"></div>
+            <button id="downloadBtn">下载调整后的文件</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
